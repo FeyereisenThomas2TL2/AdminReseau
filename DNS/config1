@@ -1,0 +1,18 @@
+$ORIGIN wt12.ephec-ti.be.
+$TTL 86400
+@ IN SOA ns.wt12.ephec-ti.be he201505@students.ephec.be (
+                2018041903 ; serial
+                604800     ; Refresh
+                86400      ; Retry
+                2419200    ; Expire
+                86400)      ; Negative Cache TTL
+;
+
+; name server
+@       IN      NS      ns.wt12.ephec-ti.be.
+
+; web
+
+serverWeb       IN      A        54.37.65.68
+www     IN      CNAME   serverWeb
+b2b     CNAME   serverWeb

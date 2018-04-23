@@ -1,0 +1,33 @@
+$TTL 86400
+
+$ORIGIN wt12.ephec-ti.be.
+
+@       IN      SOA     bind.wt12.ephec-ti.be. root.wt12.ephec-ti.be. (
+
+                        20181302        ; serial
+                        21600           ; refresh after 6 hours
+                        3600            ; retry after 1 hour
+                        604800          ; expires after 1 week
+                        86400           ; minimum TTL 1 day
+)
+
+
+
+wt12.ephec-ti.be.               IN      NS              bind.wt12.ephec-ti.be.
+bind.wt12.ephec-ti.be.          IN      A               54.37.65.68
+web                             IN      A               54.37.65.68
+www                             IN      CNAME           web
+b2b                             IN      CNAME           web
+www.b2b                         IN      CNAME           web
+intranet                        IN      CNAME           web
+www.intranet                    IN      CNAME           web
+
+
+------------------------------------------------------------------------------
+Partie mail du DNS
+------------------------------------------------------------------------------
+
+mail                            IN      MX              mail.wt12.ephec-ti.be.
+mail.wt12.ephec-ti.be.          IN      A               54.37.65.68
+imap                            IN      CNAME           mail.wt12.ephec-ti.be.
+smtp                            IN      CNAME           mail.wt12.ephec-ti.be.

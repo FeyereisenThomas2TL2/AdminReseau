@@ -1,0 +1,35 @@
+$TTL 86400
+
+$ORIGIN wt12.ephec-ti.be.
+
+@       IN      SOA     ns.wt12.ephec-ti.be. root.wt12.ephec-ti.be. (
+
+                        20181302        ; serial
+                        21600           ; refresh after 6 hours
+                        3600            ; retry after 1 hour
+                        604800          ; expires after 1 week
+                        86400           ; minimum TTL 1 day
+)
+
+@                               IN      NS              ns.wt12.ephec-ti.be.
+@                               IN      MX      10      mail
+
+
+ns                              IN      A               54.37.65.68
+
+srvWeb                          IN      A               54.37.65.68
+www                             IN      CNAME           srvWeb
+intranet                        IN      CNAME           srvWeb
+www.intranet                    IN      CNAME           srvWeb
+b2b                             IN      CNAME           srvWeb
+www.b2b                         IN      CNAME           srvWeb
+
+
+mail                            IN      A               54.37.65.68
+imap                            IN      CNAME           mail
+smtp                            IN      CNAME           mail
+
+mail._domainkey                 IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; "
+          "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy76C7qo9nCWO0+thAv4PpXZsE4pGYUtl6g48ejCKknTxbjMha2ISNPrKSNQX4fhtR3YZ4kAE+zDY+UJY1Q7RuOGNdMjbUXSlumHaDMKln3+O3/QwNo1fA2H0gZ4yZi2yX6K76x9TUyi2jNJHZokxCVmaLhVSPpNHQ0OrVC3qgATGRTijdhtR0lBGivIc4Dwg8CTZcdCptHCP4n"
+          "57LG/eGfQO+faTQp9N+17TOneHj8PPu1KEwsbUhWulBXnyzw7jNF10dbGVBW9u9oSs2UGXgNKb+uwFS84A0VZwYzLyHVu6F7akC+roJTWXn/su1lStnEFXCfzC0pBHcljdvByXdQIDAQAB" )  ; ----- DKIM key mail for wt12.ephec-ti.be
+

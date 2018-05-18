@@ -5,7 +5,7 @@
         // set the PDO error mode to exception
         // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "<p> Connected successfully </p>";
-        $query = requete.value;
+        $query = "select * from PRODUIT;";
         echo $query;
         echo "<br>";
         $stmt=$conn->prepare($query);

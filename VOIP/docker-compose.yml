@@ -2,7 +2,7 @@ version : '2'
 
 services :
   voip:
-    image: adrien97nini/wt_voip:test
+    image: thofey/voip
     container_name: voip
     ports:
       - "5060:5060/tcp"

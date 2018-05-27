@@ -33,3 +33,6 @@ mail._domainkey                 IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; "
           "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy76C7qo9nCWO0+thAv4PpXZsE4pGYUtl6g48ejCKknTxbjMha2ISNPrKSNQX4fhtR3YZ4kAE+zDY+UJY1Q7RuOGNdMjbUXSlumHaDMKln3+O3/QwNo1fA2H0gZ4yZi2yX6K76x9TUyi2jNJHZokxCVmaLhVSPpNHQ0OrVC3qgATGRTijdhtR0lBGivIc4Dwg8CTZcdCptHCP4n"
           "57LG/eGfQO+faTQp9N+17TOneHj8PPu1KEwsbUhWulBXnyzw7jNF10dbGVBW9u9oSs2UGXgNKb+uwFS84A0VZwYzLyHVu6F7akC+roJTWXn/su1lStnEFXCfzC0pBHcljdvByXdQIDAQAB" )  ; ----- DKIM key mail for wt12.ephec-ti.be
 
+sip.wt12.ephec-ti.be.   IN      A       54.37.65.68
+_sip._udp               IN SRV 0 0 5060 sip.wt12.ephec-ti.be.
+_sip._tcp               IN SRV 0 0 5060 sip.wt12.ephec-ti.be.

@@ -12,6 +12,6 @@
                 Options Indexes FollowSymLinks MultiViews
                 AllowOverride None
                 Order allow,deny
-                allow from all
+                allow from 54.37.65.68
         </Directory>
 </VirtualHost>
